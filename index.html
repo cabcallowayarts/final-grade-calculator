@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <main class="container">
+    <main class="container mt-5">
         <h1 id="test">CCSA Final Class Grade Calculator</h1>
         <p>Enter your grades for each marking period and your midterm/final exams. If your teacher did give a midterm and/or final exam, or you otherwise were excused from taking the exam(s), slide the slider to "N/A."</p>
         <hr />
@@ -69,16 +69,19 @@
                     <input type="text" readonly class="form-control-plaintext" id="finalCurrent" value="N/A" />
                 </div>
             </div>
-            <div class="form-group form-row">
-                <label class="col-form-label" for="finalPointValue">Final Point Value:</label>
-                <div class="col">
-                    <input type="text" readonly class="form-control-plaintext" id="finalPointValue" value="4.0" />
+            <div class="jumbotron pt-4 pb-4">
+                <h3>Final Grade</h3>
+                <div class="form-group form-row mb-0">
+                    <label class="col-form-label" for="finalEndOfYearGrade">Final End of Year Grade:</label>
+                    <div class="col">
+                        <input type="text" readonly class="form-control-plaintext" id="finalEndOfYearGrade" value="A" />
+                    </div>
                 </div>
-            </div>
-            <div class="form-group form-row">
-                <label class="col-form-label" for="finalEndOfYearGrade">Final End of Year Grade:</label>
-                <div class="col">
-                    <input type="text" readonly class="form-control-plaintext" id="finalEndOfYearGrade" value="A" />
+                <div class="form-group form-row mb-0">
+                    <label class="col-form-label" for="finalPointValue">Final Point Value:</label>
+                    <div class="col">
+                        <input type="text" readonly class="form-control-plaintext" id="finalPointValue" value="4.0" />
+                    </div>
                 </div>
             </div>
         </form>
