@@ -1,14 +1,28 @@
+/*
+* CCSA Final Class Grade Calculator
+* Coded by Matthew J, https://mattajones.com
+* This document and all linked documents licensed under the MIT License, https://opensource.org/licenses/MIT
+*/
+
+/*Form Width*/
 form {
     width: 100%;
     max-width: 800px;
     min-width: 300px;
 }
 
+/*Center Slider*/
 .range-slider-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
-label[for="finalPointValue"], label[for="finalEndOfYearGrade"] {
+/*Bold End of Year Grade and Final Point Value Labels*/
+label[for="finalPointValue"],
+label[for="finalEndOfYearGrade"] {
     font-weight: bold;
 }
