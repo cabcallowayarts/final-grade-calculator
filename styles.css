@@ -1,0 +1,14 @@
+form {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+}
+
+.range-slider-center {
+    display: flex;
+    align-items: center;
+}
+
+label[for="finalPointValue"], label[for="finalEndOfYearGrade"] {
+    font-weight: bold;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CCSA Final Class Grade Calculator</title>
+    <script defer src="scripts.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1 id="test">CCSA Final Class Grade Calculator</h1>
+        <p>Enter your grades for each marking period and your midterm/final exams. If your teacher did give a midterm and/or final exam, or you otherwise were excused from taking the exam(s), slide the slider to "N/A."</p>
+        <hr />
+        <h2>Calculator</h2>
+        <form>
+            <div class="form-group form-row">
+                <label for="mp1" class="col-4 col-form-label">Marking Period 1</label>
+                <div class="col-auto range-slider-center">
+                    <input id="mp1" class="custom-range" type="range" min="0" max="4" step="1" value="4" />
+                </div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="mp1Current" value="A" />
+                </div>
+            </div>
+            <div class="form-group form-row">
+                <label for="mp2" class="col-4 col-form-label">Marking Period 2</label>
+                <div class="col-auto range-slider-center">
+                    <input id="mp2" class="custom-range" type="range" min="0" max="4" step="1" value="4" />
+                </div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="mp2Current" value="A" />
+                </div>
+            </div>
+            <div class="form-group form-row">
+                <label for="mp3" class="col-4 col-form-label">Marking Period 3</label>
+                <div class="col-auto range-slider-center">
+                    <input id="mp3" class="custom-range" type="range" min="0" max="4" step="1" value="4" />
+                </div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="mp3Current" value="A" />
+                </div>
+            </div>
+            <div class="form-group form-row">
+                <label for="mp4" class="col-4 col-form-label">Marking Period 4</label>
+                <div class="col-auto range-slider-center">
+                    <input id="mp4" class="custom-range" type="range" min="0" max="4" step="1" value="4" />
+                </div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="mp4Current" value="A" />
+                </div>
+            </div>
+            <div class="form-group form-row">
+                <label for="midTerm" class="col-4 col-form-label">Mid-Term Exam</label>
+                <div class="col-auto range-slider-center">
+                    <input id="midTerm" class="custom-range" type="range" min="-1" max="4" step="1" value="-1" />
+                </div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="midTermCurrent" value="N/A" />
+                </div>
+            </div>
+            <div class="form-group form-row">
+                <label for="final" class="col-4 col-form-label">Final Exam</label>
+                <div class="col-auto range-slider-center">
+                    <input id="final" class="custom-range" type="range" min="-1" max="4" step="1" value="-1" />
+                </div>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="finalCurrent" value="N/A" />
+                </div>
+            </div>
+            <div class="form-group form-row">
+                <label class="col-form-label" for="finalPointValue">Final Point Value:</label>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="finalPointValue" value="4.0" />
+                </div>
+            </div>
+            <div class="form-group form-row">
+                <label class="col-form-label" for="finalEndOfYearGrade">Final End of Year Grade:</label>
+                <div class="col">
+                    <input type="text" readonly class="form-control-plaintext" id="finalEndOfYearGrade" value="A" />
+                </div>
+            </div>
+        </form>
+        <hr />
+        <h2>Final Grade Determination</h2>
+        <p>The final course grade shall be the average of the four quarter grades, each with a weight value of (2), and the mid-year and final examination grades each with a weight value of (1). Quarter and examination grades shall carry a numerical value of: A = 4; B = 3; C = 2; D = 1; F = 0.</p>
+        <h5>Letter Grade Quality Points</h5>
+        <ul>
+            <li>A = 90 – 100 | 4 Quality Points</li>
+            <li>B = 80 – 89 | 3 Quality Points</li>
+            <li>C = 70 – 79 | 2 Quality Points</li>
+            <li>D = 60 – 69 | 1 Quality Points</li>
+            <li>F = &lt;60 | 0 Quality Points</li>
+        </ul>
+        <p>The numerical average shall be converted to a letter grade using the following scale. If the numerical grade is:</p>
+        <ul>
+            <li>Greater than or equal to 3.50 = A</li>
+            <li>Greater than or equal to 2.5 through 3.4 = B</li>
+            <li>Greater than or equal to 1.50 through 2.4 = C</li>
+            <li>0.6, up to and including 1.4 = D</li>
+            <li>Less than 0.6 = F</li>
+        </ul>
+        <p><strong>Three marking period F’s constitute course failing regardless of quality points.</strong></p>
+    </main>
+</body></html>
