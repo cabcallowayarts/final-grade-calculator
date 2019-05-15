@@ -1,21 +1,43 @@
+<!--
+- CCSA Final Class Grade Calculator
+- Coded by Matthew J, https://mattajones.com
+- This document and all linked documents licensed under the MIT License, https://opensource.org/licenses/MIT
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Charset Meta-->
     <meta charset="UTF-8">
+
+    <!--Viewport Meta-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Document Title-->
     <title>CCSA Final Class Grade Calculator</title>
+
+    <!--Calculator Scripts-->
     <script defer src="scripts.js"></script>
+
+    <!--Boostrap CDN Link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!--Custom CSS Link-->
     <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
+    <!--Main Container-->
     <main class="container mt-5">
-        <h1 id="test">CCSA Final Class Grade Calculator</h1>
+        <!--Title of Page-->
+        <h1>CCSA Final Class Grade Calculator</h1>
+        <!--How to Use-->
+        <h3>How to Use</h3>
         <p>Enter your grades for each marking period and your midterm/final exams. If your teacher did give a midterm and/or final exam, or you otherwise were excused from taking the exam(s), slide the slider to "N/A."</p>
         <hr />
+        <!--Calculator-->
         <h2>Calculator</h2>
         <form>
+            <!--MP1-->
             <div class="form-group form-row">
                 <label for="mp1" class="col-4 col-form-label">Marking Period 1</label>
                 <div class="col-auto range-slider-center">
@@ -25,6 +47,7 @@
                     <input type="text" readonly class="form-control-plaintext" id="mp1Current" value="A" />
                 </div>
             </div>
+            <!--MP2-->
             <div class="form-group form-row">
                 <label for="mp2" class="col-4 col-form-label">Marking Period 2</label>
                 <div class="col-auto range-slider-center">
@@ -34,6 +57,7 @@
                     <input type="text" readonly class="form-control-plaintext" id="mp2Current" value="A" />
                 </div>
             </div>
+            <!--MP3-->
             <div class="form-group form-row">
                 <label for="mp3" class="col-4 col-form-label">Marking Period 3</label>
                 <div class="col-auto range-slider-center">
@@ -43,6 +67,7 @@
                     <input type="text" readonly class="form-control-plaintext" id="mp3Current" value="A" />
                 </div>
             </div>
+            <!--MP4-->
             <div class="form-group form-row">
                 <label for="mp4" class="col-4 col-form-label">Marking Period 4</label>
                 <div class="col-auto range-slider-center">
@@ -52,6 +77,7 @@
                     <input type="text" readonly class="form-control-plaintext" id="mp4Current" value="A" />
                 </div>
             </div>
+            <!--Mid-Term Exam-->
             <div class="form-group form-row">
                 <label for="midTerm" class="col-4 col-form-label">Mid-Term Exam</label>
                 <div class="col-auto range-slider-center">
@@ -61,6 +87,7 @@
                     <input type="text" readonly class="form-control-plaintext" id="midTermCurrent" value="N/A" />
                 </div>
             </div>
+            <!--Final Exam-->
             <div class="form-group form-row">
                 <label for="final" class="col-4 col-form-label">Final Exam</label>
                 <div class="col-auto range-slider-center">
@@ -70,6 +97,7 @@
                     <input type="text" readonly class="form-control-plaintext" id="finalCurrent" value="N/A" />
                 </div>
             </div>
+            <!--End of Year Grade and Points Jumbotron-->
             <div class="jumbotron pt-4 pb-4">
                 <h3>Final Grade</h3>
                 <div class="form-group form-row mb-0">
@@ -87,6 +115,7 @@
             </div>
         </form>
         <hr />
+        <!--Final Grade Determination Description Section-->
         <h2>Final Grade Determination</h2>
         <p>The final course grade shall be the average of the four quarter grades, each with a weight value of (2), and the mid-year and final examination grades each with a weight value of (1). Quarter and examination grades shall carry a numerical value of: A = 4; B = 3; C = 2; D = 1; F = 0.</p>
         <h5>Letter Grade Quality Points</h5>
@@ -107,4 +136,9 @@
         </ul>
         <p><strong>Three marking period F’s constitute course failing regardless of quality points.</strong></p>
     </main>
+    <!--Footer-->
+    <nav class="navbar navbar-dark bg-dark">
+        <!--Credit-->
+        <p class="navbar-text mb-0">Created by <a href="https://mattajones.com/" target="_blank">Matthew J</a>, CCSA Class of 2019</p>
+    </nav>
 </body></html>
