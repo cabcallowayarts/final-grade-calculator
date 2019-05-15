@@ -1,59 +1,78 @@
+/*
+ * CCSA Final Class Grade Calculator
+ * Coded by Matthew J, https://mattajones.com
+ * This document and all linked documents licensed under the MIT License, https://opensource.org/licenses/MIT
+ */
+
+//Sliders
 const mp1Slider = document.getElementById("mp1");
 const mp2Slider = document.getElementById("mp2");
 const mp3Slider = document.getElementById("mp3");
 const mp4Slider = document.getElementById("mp4");
 const midTermSlider = document.getElementById("midTerm");
 const finalSlider = document.getElementById("final");
+
+//Final End of Year Grade and Point Value Labels
 const finalEndOfYearGrade = document.getElementById("finalEndOfYearGrade");
 const finalPointValue = document.getElementById("finalPointValue");
+
+//Grade Labels
 var mp1Grade = document.getElementById("mp1Current");
 var mp2Grade = document.getElementById("mp2Current");
 var mp3Grade = document.getElementById("mp3Current");
 var mp4Grade = document.getElementById("mp4Current");
 var midTermGrade = document.getElementById("midTermCurrent");
 var finalGrade = document.getElementById("finalCurrent");
+
+//Final End of Year Point Value
 var calculatedGrade = recalc();
 
 //MP1 Event Listener
 mp1Slider.addEventListener("input", function () {
+    //Change value of label to selected grade
     mp1Grade.value = changeGrade(mp1Slider.value);
+    //Recalculate final calculated grade
     calculatedGrade = recalc();
-    console.log(calculatedGrade);
 });
 
 //MP2 Event Listener
 mp2Slider.addEventListener("input", function () {
+    //Change value of label to selected grade
     mp2Grade.value = changeGrade(mp2Slider.value);
+    //Recalculate final calculated grade
     calculatedGrade = recalc();
-    console.log(calculatedGrade);
 });
 
 //MP3 Event Listener
 mp3Slider.addEventListener("input", function () {
+    //Change value of label to selected grade
     mp3Grade.value = changeGrade(mp3Slider.value);
+    //Recalculate final calculated grade
     calculatedGrade = recalc();
-    console.log(calculatedGrade);
 });
 
 //MP4 Event Listener
 mp4Slider.addEventListener("input", function () {
+    //Change value of label to selected grade
     mp4Grade.value = changeGrade(mp4Slider.value);
+    //Recalculate final calculated grade
     calculatedGrade = recalc();
-    console.log(calculatedGrade);
 });
 
 //Mid Term Event Listener
 midTermSlider.addEventListener("input", function () {
+    //Change value of label to selected grade
     midTermGrade.value = changeGrade(midTermSlider.value);
+    //Recalculate final calculated grade
     calculatedGrade = recalc();
-    console.log(calculatedGrade);
 });
 
 //Final Event Listener
 finalSlider.addEventListener("input", function () {
+    //Change value of label to selected grade
     finalGrade.value = changeGrade(finalSlider.value);
+    //Recalculate final calculated grade
     calculatedGrade = recalc();
-    console.log(calculatedGrade);
 });
 
 //Change Grade
@@ -78,19 +97,21 @@ function changeGrade(val) {
 
 //Recalculate the final grade
 function recalc() {
+    //Parse all values as ints
     var mp1Int = parseInt(mp1Slider.value);
     var mp2Int = parseInt(mp2Slider.value);
     var mp3Int = parseInt(mp3Slider.value);
     var mp4Int = parseInt(mp4Slider.value);
     var midTermInt = parseInt(midTermSlider.value);
     var finalInt = parseInt(finalSlider.value);
-    var midTermCalc;
-    var finalCalc;
+
+    //Final point value
     var endOfYearGrade;
-    var failures = 0;
 
     //Determine Denominator and Midterm/Final Calculator
     var denom = 10;
+    var midTermCalc;
+    var finalCalc;
     if (midTermInt === -1) {
         denom--;
         midTermCalc = 0;
@@ -105,16 +126,17 @@ function recalc() {
     }
 
     //Count MP failures
-    if(mp1Int === 0) {
+    var failures = 0;
+    if (mp1Int === 0) {
         failures++;
     }
-    if(mp2Int === 0) {
+    if (mp2Int === 0) {
         failures++;
     }
-    if(mp3Int === 0) {
+    if (mp3Int === 0) {
         failures++;
     }
-    if(mp4Int === 0) {
+    if (mp4Int === 0) {
         failures++;
     }
 
@@ -134,9 +156,7 @@ function recalc() {
 
 //Display the end of year grades
 function displayEndOfYearGrade(point) {
-
-    console.log(point);
-    //Letter Grade Calc
+    //Letter Grade Calculation
     var EOYGrade;
     if (point >= 3.5) {
         EOYGrade = 'A';
@@ -150,6 +170,7 @@ function displayEndOfYearGrade(point) {
         EOYGrade = 'F';
     }
 
+    //Display values (points rounded to the nearest two decimal places)
     finalPointValue.value = round(point, 2);
     finalEndOfYearGrade.value = EOYGrade;
 }
